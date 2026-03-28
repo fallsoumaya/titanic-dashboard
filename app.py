@@ -46,7 +46,7 @@ df = get_data()
 # -----------------------------
 # 3) SIDEBAR: FILTRES GLOBAUX
 # -----------------------------
-st.sidebar.title("🎛️ Filtres")
+st.sidebar.title("Filtres")
 
 all_classes = sorted(df["class"].dropna().unique().tolist())
 all_sexes = sorted(df["sex"].dropna().unique().tolist())
@@ -73,7 +73,7 @@ log_event("filters_applied", {
 # -----------------------------
 # 4) NAVIGATION: 4 PAGES (NOMS DU SUJET)
 # -----------------------------
-st.title("🚢 Titanic Dashboard (Projet DevOps)")
+st.title("Titanic Dashboard (Projet DevOps)")
 
 PAGES = [
     "Vue générale",
@@ -82,7 +82,7 @@ PAGES = [
     "Données brutes"
 ]
 
-page = st.sidebar.radio("📄 Pages", PAGES)
+page = st.sidebar.radio("Pages", PAGES)
 
 log_event("page_visited", {"page": page})
 
@@ -91,7 +91,7 @@ log_event("page_visited", {"page": page})
 # PAGE 1 — VUE GÉNÉRALE
 # =========================================================
 def page_vue_generale(data: pd.DataFrame):
-    st.header("📌 Vue générale")
+    st.header("Vue générale")
 
     # KPI demandés : nombre passagers, taux survie, âge moyen
     col1, col2, col3 = st.columns(3)
@@ -100,9 +100,9 @@ def page_vue_generale(data: pd.DataFrame):
     taux_survie = round(data["survived"].mean() * 100, 2) if nb_passagers > 0 else 0
     age_moyen = round(data["age"].mean(), 1) if nb_passagers > 0 else 0
 
-    col1.metric("👥 Nombre de passagers", nb_passagers)
-    col2.metric("✅ Taux de survie global (%)", taux_survie)
-    col3.metric("🎂 Âge moyen", age_moyen)
+    col1.metric("Nombre de passagers", nb_passagers)
+    col2.metric("Taux de survie global (%)", taux_survie)
+    col3.metric("Âge moyen", age_moyen)
 
     st.subheader("Aperçu (après filtres)")
     st.dataframe(data.head(30), use_container_width=True)
@@ -112,7 +112,7 @@ def page_vue_generale(data: pd.DataFrame):
 # PAGE 2 — ANALYSE DE SURVIE
 # =========================================================
 def page_analyse_survie(data: pd.DataFrame):
-    st.header("📊 Analyse de survie")
+    st.header("Analyse de survie")
 
     if len(data) == 0:
         st.warning("Aucune donnée avec ces filtres. Modifie les filtres dans la sidebar.")
@@ -168,7 +168,7 @@ def page_analyse_survie(data: pd.DataFrame):
 # (Page dédiée pour montrer le filtrage + résumé)
 # =========================================================
 def page_filtres_interactifs(data: pd.DataFrame):
-    st.header("🎛️ Filtres interactifs")
+    st.header("Filtres interactifs")
 
     st.markdown("Cette page montre clairement l'impact des filtres sur les données et les indicateurs.")
 
@@ -180,7 +180,7 @@ def page_filtres_interactifs(data: pd.DataFrame):
         st.write("**Sexe :**", ", ".join(selected_sexes) if selected_sexes else "Aucun")
         st.write("**Tranche d'âge :**", ", ".join([str(x) for x in selected_age_groups]) if selected_age_groups else "Aucune")
 
-        st.info(f"✅ Lignes après filtrage : **{len(data)}**")
+        st.info(f"Lignes après filtrage : **{len(data)}**")
 
     with colB:
         st.subheader("Répartition (après filtres)")
@@ -199,7 +199,7 @@ def page_filtres_interactifs(data: pd.DataFrame):
 # PAGE 4 — DONNÉES BRUTES + EXPORT CSV
 # =========================================================
 def page_donnees_brutes(data: pd.DataFrame):
-    st.header("🧾 Données brutes")
+    st.header("Données brutes")
 
     if len(data) == 0:
         st.warning("Aucune donnée à afficher avec ces filtres.")
@@ -209,7 +209,7 @@ def page_donnees_brutes(data: pd.DataFrame):
 
     csv = data.to_csv(index=False).encode("utf-8")
     st.download_button(
-        label="📥 Exporter en CSV",
+        label="Exporter en CSV",
         data=csv,
         file_name="titanic_filtered.csv",
         mime="text/csv"
