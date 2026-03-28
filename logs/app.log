@@ -7,3 +7,5 @@
 {"timestamp": "2026-03-28T16:07:22.095545", "event": "filters_applied", "details": {"class": ["First", "Second", "Third"], "sex": ["female", "male"], "age_group": ["Adulte (19-35)", "Senior (36-60)", "Enfant (0-12)", "Ado (13-18)", "\u00c2g\u00e9 (60+)"], "rows_after_filter": 714}}
 {"timestamp": "2026-03-28T16:07:22.101952", "event": "page_visited", "details": {"page": "Donn\u00e9es brutes"}}
 {"timestamp": "2026-03-28T16:07:22.187967", "event": "csv_export_available", "details": {"rows": 714}}
+{"timestamp": "2026-03-28T20:31:18.860740", "event": "filters_applied", "details": {"class": ["First", "Second", "Third"], "sex": ["female", "male"], "age_group": ["Adulte (19-35)", "Senior (36-60)", "Enfant (0-12)", "Ado (13-18)", "\u00c2g\u00e9 (60+)"], "rows_after_filter": 714}}
+{"timestamp": "2026-03-28T20:31:18.864851", "event": "page_visited", "details": {"page": "Vue g\u00e9n\u00e9rale"}}
