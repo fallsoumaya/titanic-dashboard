@@ -55,7 +55,7 @@ cd titanic-dashboard
 
 ---
 
-## Lancer l’application en local (sans Docker)
+Lancer l’application en local (sans Docker)
 
 1️- Créer et activer un environnement virtuel
 python -m venv env
@@ -81,7 +81,7 @@ pytest -v
 
 ---
 
-## Lancer l’application avec Docker
+Lancer l’application avec Docker
 
 1- Construire l’image Docker
 docker build -t titanic-dashboard .
@@ -90,7 +90,7 @@ docker build -t titanic-dashboard .
 docker run -p 8501:8501 titanic-dashboard
 Application accessible sur : http://localhost:8501
 
-## CI/CD — GitHub Actions
+CI/CD — GitHub Actions
 Un pipeline CI/CD est configuré avec GitHub Actions.
 À chaque push sur la branche main :
 Les tests unitaires sont exécutés
@@ -99,12 +99,12 @@ Si les tests réussissent :
 - elle est publiée sur DockerHub
 Cela garantit la qualité et la reproductibilité de l’application.
 
-## Génération d’un rapport HTML (analyse des données)
+Génération d’un rapport HTML (analyse des données)
 Un rapport HTML simple peut être généré à partir du dataset Titanic à l’aide de pandas et seaborn.
 python generate_report.pyAfficher plus de lignes
 Fichier généré : titanic-report-v1.0.html
 
-## Monitoring et logs (ELK – démonstration)
+Monitoring et logs (ELK – démonstration)
 L’application journalise les interactions utilisateurs au format JSON dans le fichier :
 logs/app.log
 
@@ -122,7 +122,7 @@ visualiser l’activité dans le temps
 
 NB : Cette partie est fournie comme preuve de compréhension du monitoring DevOps (POC), et non comme une infrastructure de production complète.
 
-## Résumé du cycle DevOps couvert
+Résumé du cycle DevOps couvert
 
 - Développement application Streamlit
 - Tests unitaires
@@ -131,7 +131,7 @@ NB : Cette partie est fournie comme preuve de compréhension du monitoring DevOp
 - Publication de l’image Docker
 - Journalisation & monitoring (ELK – démonstration)
 
-## Auteur
+Auteur
 Soumaya Fall
 Licence 3 – Data & Intelligence Artificielle
 Institut Informatique Business School (IIBS) – Sénégal
