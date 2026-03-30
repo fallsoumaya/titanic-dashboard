@@ -50,6 +50,7 @@ titanic-dashboard/
 ## Cloner le projet
 
 git clone https://github.com/fallsoumaya/titanic-dashboard.git
+
 cd titanic-dashboard
 
 ---
@@ -63,7 +64,7 @@ python -m venv env
 
 env\Scripts\activate
 
-Linux / macOS
+- Linux / macOS
 
 source env/bin/activate
 
@@ -72,10 +73,12 @@ pip install -r requirements.txt
 
 3️- Lancer l’application Streamlit
 streamlit run app.py
+
 Application accessible sur : http://localhost:8501
 
 Exécuter les tests unitaires
 Les tests sont écrits avec pytest.
+
 pytest -v
 
 ---
@@ -87,6 +90,7 @@ docker build -t titanic-dashboard .
 
 2️- Lancer le conteneur
 docker run -p 8501:8501 titanic-dashboard
+
 Application accessible sur : http://localhost:8501
 
 ## CI/CD — GitHub Actions
@@ -132,5 +136,7 @@ NB : Cette partie est fournie comme preuve de compréhension du monitoring DevOp
 
 ## Auteur
 Soumaya Fall
+
 Licence 3 – Data & Intelligence Artificielle
+
 Institut Informatique Business School (IIBS) – Sénégal
