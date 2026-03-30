@@ -44,6 +44,7 @@ titanic-dashboard/
 │   └── filebeat.yml
 │
 └── README.md
+
 ---
 
 ## Cloner le projet
