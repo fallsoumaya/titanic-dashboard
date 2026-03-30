@@ -3,4 +3,3 @@ pandas
 plotly
 seaborn
 pytest
-ydata-profling
