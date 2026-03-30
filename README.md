@@ -48,49 +48,55 @@ titanic-dashboard/
 ---
 
 ## Cloner le projet
-
+```bash
 git clone https://github.com/fallsoumaya/titanic-dashboard.git
 
 cd titanic-dashboard
+```
 
 ---
 
 ## Lancer l’application en local (sans Docker)
 
 1️- Créer et activer un environnement virtuel
+```bash
 python -m venv env
-
+```
 - Windows
-
+```bash
 env\Scripts\activate
-
+```
 - Linux / macOS
-
+```bash
 source env/bin/activate
-
+```
 2️- Installer les dépendances
+```bash
 pip install -r requirements.txt
-
+```
 3️- Lancer l’application Streamlit
+```bash
 streamlit run app.py
-
+```
 Application accessible sur : http://localhost:8501
 
 Exécuter les tests unitaires
 Les tests sont écrits avec pytest.
-
+```bash
 pytest -v
-
+```
 ---
 
 ## Lancer l’application avec Docker
 
 1- Construire l’image Docker
+```bash
 docker build -t titanic-dashboard .
-
+```
 2️- Lancer le conteneur
+```bash
 docker run -p 8501:8501 titanic-dashboard
-
+```
 Application accessible sur : http://localhost:8501
 
 ## CI/CD — GitHub Actions
