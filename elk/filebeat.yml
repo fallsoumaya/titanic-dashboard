@@ -1,10 +1,15 @@
 filebeat.inputs:
-  - type: log
+  - type: filestream
+    id: titanic-app-log
     enabled: true
     paths:
       - /var/log/app/app.log
-    json.keys_under_root: true
-    json.add_error_key: true
+
+    parsers:
+      - ndjson:
+          keys_under_root: true
+          add_error_key: true
+          overwrite_keys: true
 
 output.elasticsearch:
   hosts: ["http://elasticsearch:9200"]
