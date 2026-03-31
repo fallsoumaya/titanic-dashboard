@@ -140,13 +140,13 @@ NB : Cette partie est fournie comme preuve de compréhension du monitoring DevOp
 - Publication de l’image Docker
 - Journalisation & monitoring (ELK – démonstration)
 
+## Application déployée sur streamlit
+
+Lien : https://titanic-dashboard-soumayafall.streamlit.app/
+
 ## Auteur
 Soumaya Fall
 
 Licence 3 – Data & Intelligence Artificielle
 
 Institut Informatique Business School (IIBS) – Sénégal
-
-## Application déployée sur streamlit
-
-Lien : https://titanic-dashboard-soumayafall.streamlit.app/
