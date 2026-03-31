@@ -146,3 +146,7 @@ Soumaya Fall
 Licence 3 – Data & Intelligence Artificielle
 
 Institut Informatique Business School (IIBS) – Sénégal
+
+## Application déployée sur streamlit
+
+Lien : https://titanic-dashboard-soumayafall.streamlit.app/
